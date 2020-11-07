@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # ----------------------------------------
 # Program  : Efectuer un ping
 # FileName : ping_testing.py
@@ -47,7 +49,7 @@ def ping(addr):
          t2 = datetime.now()
          total = t2 - t1
          print('Succes !!')
-         print ("from {}: ttl={} time={} ms".format(addr,ttl,total))
+         print ("from {}: ttl={} time={} ".format(addr,ttl,total))
       else:
           print('Port unreachable')
 
