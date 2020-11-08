@@ -1,8 +1,17 @@
 
+# ----------------------------------------
+# Program  : Ecrire un programme en python qui permet d'effectuer un traceroute
+# FileName : ping.py
+# Input	   : github.com
+# Output   :  Reference photo
+# By       : Kevin J. DUBUCHE 
+# ---------------------------------------- 
+
+# __________________________________________________________
 import socket
 import time
 port = 6332 
-max_hops = 40
+max_hops = 40 #quantite maximale de router qui arrete la procedure (pour eviter des boucles infinis dans un mauvais reseau)
 
 def Traceroute(dest_name):  
     dest_addr = socket.gethostbyname(dest_name)

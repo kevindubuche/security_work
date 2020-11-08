@@ -1,43 +1,31 @@
 #!/usr/bin/env python3
 
 # ----------------------------------------
-# Program  : Efectuer un ping
-# FileName : ping_testing.py
-# I/P 	  : 127.0.0.1
-# O/P 	  :  
-# By       : Kevin J DUBUCHE 
+# Program  : Efectuer un ping vers le IP d'un server qui ecoute au port 6332
+# FileName : ping.py
+# Input	  : 127.0.0.1
+# Output	  :  
+# By       : Kevin J. DUBUCHE 
 # ---------------------------------------- 
 
 # Ecrire un programme en python qui permet d'effectuer un ping
 # Contraintes: Port 6332  | use Idle | use socket | architecture Client/Server  
 
 # __________________________________________________________
-   #socket.SOCK_STREAM           The default protocol that’s used is TCP (Is reliable; Has in-order data delivery)
 
 #importation des packages utiles a programme
 import socket
 from datetime import datetime
-import http.server
-import socketserver
 #fin des importations
 
 IP = input("Enter the IP address: ")
 t1 = datetime.now()
-ttl = 0.025
+ttl = 1
 PORT = 6332
-socket.setdefaulttimeout(ttl)
-
-# def startServer(PORT):
-#    Handler = http.server.SimpleHTTPRequestHandler
-#    with socketserver.TCPServer(("", PORT), Handler) as httpd:
-#       print("serving at port", PORT)
-      # httpd.serve_forever()
-
-
 
 def scan(addr):
    s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-   socket.setdefaulttimeout(1)
+   socket.setdefaulttimeout(ttl)
    result = s.connect_ex((addr,PORT))
    if result == 0:
       return 1
@@ -53,5 +41,5 @@ def ping(addr):
       else:
           print('Port unreachable')
 
-# startServer(PORT)        
+      
 ping(IP)
