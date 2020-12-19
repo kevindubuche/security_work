@@ -14,7 +14,7 @@ def scan(addr):
    result = s.connect_ex((addr,PORT))
    
    if result == 0:
-      s.send(vignere('le texte en clair','we4','e').encode())
+      s.send(vignere('le texte en precis','we4','e').encode())
       return 1
    else :
       return 0

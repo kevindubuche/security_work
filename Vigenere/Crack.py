@@ -37,7 +37,7 @@ def decryption(txt,key):
     return (resultat)
 # Driver code 
 if __name__ == "__main__":    
-    with open('/home/kevin/Desktop/Security_Lab-master/Vigenere/Cypher.txt', 'r') as file:
+    with open('/home/kevin/Documents/kevin/EN3/Security/Vigenere/Cypher.txt', 'r') as file:
        cypher = file.read()
     
     for size in range(1,10): #Size of the key
