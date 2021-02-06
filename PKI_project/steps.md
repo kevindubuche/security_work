@@ -1,6 +1,6 @@
 Configuration de ADDC sur Virtualbox
 <<<<<<<<<<<<<<<<<<<<<WORKING ENVIRONEMENT>>>>>>>>>>>>>>>>>>>>>
-1.  [] Environnement de travail:
+1.  [] Working env:
 RAM: 16 GiB
 OS: Ubuntu 20.04.1 LTS
 
